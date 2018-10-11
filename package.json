@@ -1,0 +1,14 @@
+{
+  "name": "heapsnapshot.js",
+  "version": "0.0.1",
+  "description": "A tool to take a heap snapshot of Node.js via V8 profiler",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "flyingpig princetotti@163.com",
+  "license": "MIT",
+  "dependencies": {
+    "v8-profiler-node8": "^6.0.1"
+  }
+}
