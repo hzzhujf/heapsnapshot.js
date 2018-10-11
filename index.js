@@ -25,7 +25,7 @@ let nextMBThreshold = 0;
  * @param datadir Folder to save the data to
  */
 module.exports.init = function (datadir, options) {
-  _datadir = datadir || '/';
+  _datadir = datadir || '.';
   _options = Object.assign({}, DEFAULT_OPTIONS, options);
   nextMBThreshold = _options.threshold;
   setInterval(tickHeapDump, _options.interval);
