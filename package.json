@@ -1,6 +1,6 @@
 {
   "name": "heapsnapshot.js",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "A tool to take a heap snapshot of Node.js via V8 profiler",
   "main": "index.js",
   "scripts": {
