@@ -3,9 +3,15 @@
 
 # heapdump.js
 A tool to take a heap snapshot via V8 profiler, which is inspired by [Understanding Garbage Collection and hunting Memory Leaks in Node.js](https://www.dynatrace.com/news/blog/understanding-garbage-collection-and-hunting-memory-leaks-in-node-js/)
+
 ## required
 - Node.js >= 6.4.0
 - OSX: This code is only pass-test on OSX platform
+
+## install
+```shell
+npm install heapsnapshot.js
+```
 
 ## usage
 add this code to the start
