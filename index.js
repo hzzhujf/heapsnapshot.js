@@ -9,7 +9,14 @@
 const fs = require('fs');
 const profiler = require('v8-profiler-node8');
 const MB = 1024 * 1024;
+const DEFAULT_OPTIONS = {
+  interval: 500,
+  step: 50,
+  threshold: 0
+};
+
 let _datadir = null;
+let _options = null;
 let nextMBThreshold = 0;
 
 /**
@@ -17,9 +24,11 @@ let nextMBThreshold = 0;
  *
  * @param datadir Folder to save the data to
  */
-module.exports.init = function (datadir) {
-  _datadir = datadir;
-  setInterval(tickHeapDump, 500);
+module.exports.init = function (datadir, options) {
+  _datadir = datadir || '/';
+  _options = Object.assign({}, DEFAULT_OPTIONS, options);
+  nextMBThreshold = _options.threshold;
+  setInterval(tickHeapDump, _options.interval);
 };
 
 /**
@@ -40,7 +49,7 @@ function heapDump() {
   if (memMB > nextMBThreshold) {
     console.log(memMB + '>' + nextMBThreshold);
     console.log('Current memory usage:', process.memoryUsage());
-    nextMBThreshold += 50;
+    nextMBThreshold += _options.step;
     var snap = profiler.takeSnapshot('profile');
     saveHeapSnapshot(snap, _datadir);
   }
