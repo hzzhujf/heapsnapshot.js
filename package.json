@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git@github.com:hzzhujf/heapsnapshot.js.git"
   },
-  "keywords": ["js","gc","nodejs","heap","memory","v8" ],
+  "keywords": ["js","gc","nodejs","heap","memory","v8","snapshot"],
   "author": "flyingpig princetotti@163.com",
   "license": "MIT",
   "dependencies": {
