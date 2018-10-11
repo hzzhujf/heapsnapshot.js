@@ -3,3 +3,6 @@
 
 # heapdump.js
 A tool to take a heap snapshot via V8 profiler
+
+## required
+- Node.js >= 6.4.0
