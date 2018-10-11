@@ -1,6 +1,6 @@
 /**
  * Simple userland heapdump generator using v8-profiler
- * Usage: require('[path_to]/heapdump').init('datadir')
+ * Usage: require('heapsnapshot.js').init()
  *
  * @module heapdump
  * @type {exports}
